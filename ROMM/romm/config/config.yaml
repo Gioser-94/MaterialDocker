@@ -1,0 +1,13 @@
+platforms:
+  - id: snes
+    name: Super Nintendo
+    path: /app/roms/snes
+    extensions: [".smc", ".sfc"]
+    emulator: emulatorjs
+
+  - id: ps2
+    name: PlayStation 2
+    path: /app/roms/ps2
+    extensions: [".iso", ".bin"]
+    emulator: emulatorjs
+

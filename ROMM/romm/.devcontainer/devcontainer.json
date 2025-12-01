@@ -1,0 +1,47 @@
+{
+  "name": "ROMM Development",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "romm-dev",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [8443, 3000, 3306, 5000, 6379],
+  "portsAttributes": {
+    "8443": {
+      "label": "HTTPS Dev Server",
+      "onAutoForward": "notify"
+    },
+    "3000": {
+      "label": "Frontend Dev Server",
+      "onAutoForward": "notify"
+    },
+    "3306": {
+      "label": "MariaDB",
+      "onAutoForward": "silent"
+    },
+    "5000": {
+      "label": "Backend API",
+      "onAutoForward": "notify"
+    },
+    "6379": {
+      "label": "Valkey/Redis",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-python.black-formatter",
+        "vue.volar",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postCreateCommand": "echo 'ROMM development environment ready!'",
+  "remoteUser": "root"
+}

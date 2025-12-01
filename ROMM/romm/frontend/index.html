@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9205f2" />
+    <meta name="msapplication-TileColor" content="#9205f2" />
+    <meta name="theme-color" content="#2a0145" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RomM</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="app-loading-logo">
+        <img
+          src="/assets/logos/romm_logo_xbox_one_circle_grayscale.svg"
+          alt="Romm Logo"
+        />
+      </div>
+    </div>
+
+    <style>
+      #app-loading-logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1020 !important;
+        background-color: rgba(242, 244, 248) !important;
+      }
+
+      #app-loading-logo img {
+        width: 30%;
+        height: 30%;
+        opacity: 0.1;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html,
+        body {
+          background-color: rgba(13, 17, 23) !important;
+        }
+
+        #app-loading-logo {
+          background-color: rgba(13, 17, 23) !important;
+        }
+      }
+
+      @media (max-width: 960px) {
+        #app-loading-logo img {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    </style>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
